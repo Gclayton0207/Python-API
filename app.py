@@ -32,7 +32,19 @@ def seleciona_usuario(id):
 
     return gera_response(200, "usuario", usuario_json)
 
+# Cadastrar
+@app.route("/add_user", methods=["POST"])
+def cria_usuario():
+    body = request.get_json()
 
+    try:
+        usuario = usuarios(nome=body["nome"], email= body["email"], telefone= body["telefone"])
+        db.session.add(usuario)
+        db.session.commit()
+        return gera_response(201, "usuario", usuario.to_json(), "Usuario cadastrado com sucesso")
+    except Exception as e:
+        print('Erro', e)
+        return gera_response(400, "usuario", {}, "Erro ao cadastrar")
 
 
 def gera_response(status, nome_do_conteudo, conteudo, mensagem=False):
