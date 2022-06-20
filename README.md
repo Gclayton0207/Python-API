@@ -31,6 +31,8 @@ Uma API desenvolvida em Pyhton/flask
 - Insira seu usuario e senha do MySQL no arquivo ``prepara_banco.py`` e execute para inciar o banco de dados
 ![mysql](https://user-images.githubusercontent.com/75399046/174485241-a3d9fb2b-2c3f-4180-a3ab-e1ae5f593451.png)
 
+- Insira os mesmos dados no arquivo ``config.py`` para ter conexão com o banco de dados
+
 - Utilize o comando ``pip install -r requirements.txt`` no terminal para instalar os requerimentos do projeto
 - Utilize o comando ``python  .\app.py`` no terminal para executar a api de forma local, geralmente inicia no caminho http://127.0.0.1:5000
 - Para vizualizar a api recomendo os programas ``Insomnia`` ou ``Postman`` sao 2 testadores de api conforme imagem abaixo
